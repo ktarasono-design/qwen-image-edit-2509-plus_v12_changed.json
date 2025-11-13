@@ -1,0 +1,1778 @@
+{
+  "input": {
+    "workflow": {
+      "3": {
+        "inputs": {
+          "seed": 996042854467479,
+          "steps": 8,
+          "cfg": 1,
+          "sampler_name": "dpmpp_2m_sde",
+          "scheduler": "karras",
+          "denoise": 1,
+          "model": [
+            "129",
+            0
+          ],
+          "positive": [
+            "132",
+            0
+          ],
+          "negative": [
+            "133",
+            0
+          ],
+          "latent_image": [
+            "218",
+            0
+          ]
+        },
+        "class_type": "KSampler",
+        "_meta": {
+          "title": "KSampler"
+        }
+      },
+      "8": {
+        "inputs": {
+          "samples": [
+            "399",
+            0
+          ],
+          "vae": [
+            "125",
+            0
+          ]
+        },
+        "class_type": "VAEDecode",
+        "_meta": {
+          "title": "VAEDecode"
+        }
+      },
+      "38": {
+        "inputs": {
+          "filename": "qwen_2.5_vl_7b_fp8_scaled.safetensors"
+        },
+        "class_type": "CLIPLoader",
+        "_meta": {
+          "title": "CLIPLoader"
+        }
+      },
+      "39": {
+        "inputs": {
+          "filename": "qwen_image_vae.safetensors"
+        },
+        "class_type": "VAELoader",
+        "_meta": {
+          "title": "VAELoader"
+        }
+      },
+      "60": {
+        "inputs": {
+          "filename_prefix": "ComfyUI",
+          "images": [
+            "166",
+            0
+          ]
+        },
+        "class_type": "SaveImage",
+        "_meta": {
+          "title": "SaveImage"
+        }
+      },
+      "66": {
+        "inputs": {
+          "value": 3,
+          "model": [
+            "327",
+            0
+          ]
+        },
+        "class_type": "ModelSamplingAuraFlow",
+        "_meta": {
+          "title": "ModelSamplingAuraFlow"
+        }
+      },
+      "75": {
+        "inputs": {
+          "value": 1,
+          "model": [
+            "365",
+            0
+          ]
+        },
+        "class_type": "CFGNorm",
+        "_meta": {
+          "title": "CFGNorm"
+        }
+      },
+      "78": {
+        "inputs": {
+          "image": "IMG-20200717-WA0000.jpg"
+        },
+        "class_type": "LoadImage",
+        "_meta": {
+          "title": "LoadImage"
+        }
+      },
+      "88": {
+        "inputs": {
+          "pixels": [
+            "121",
+            0
+          ],
+          "vae": [
+            "122",
+            0
+          ]
+        },
+        "class_type": "VAEEncode",
+        "_meta": {
+          "title": "VAEEncode"
+        }
+      },
+      "110": {
+        "inputs": {
+          "filename": "boring, dull, bad, awful, blurry, low-quality, 3d-render, plastic looking skin.",
+          "clip": [
+            "120",
+            0
+          ],
+          "vae": [
+            "126",
+            0
+          ],
+          "image1": [
+            "123",
+            0
+          ],
+          "image2": [
+            "145",
+            0
+          ],
+          "image3": [
+            "146",
+            0
+          ]
+        },
+        "class_type": "TextEncodeQwenImageEditPlus",
+        "_meta": {
+          "title": "TextEncodeQwenImageEditPlus"
+        }
+      },
+      "111": {
+        "inputs": {
+          "text": "In the style of solarpunk",
+          "clip": [
+            "120",
+            0
+          ],
+          "vae": [
+            "124",
+            0
+          ],
+          "image1": [
+            "117",
+            0
+          ],
+          "image2": [
+            "142",
+            0
+          ],
+          "image3": [
+            "143",
+            0
+          ],
+          "prompt": [
+            "226",
+            0
+          ]
+        },
+        "class_type": "TextEncodeQwenImageEditPlus",
+        "_meta": {
+          "title": "TextEncodeQwenImageEditPlus"
+        }
+      },
+      "115": {
+        "inputs": {
+          "value": 768,
+          "image": [
+            "78",
+            0
+          ]
+        },
+        "class_type": "ImageResizeKJv2",
+        "_meta": {
+          "title": "ImageResizeKJv2"
+        }
+      },
+      "116": {
+        "inputs": {
+          "text": "IMG_1",
+          "IMAGE": [
+            "174",
+            0
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_IMG_1"
+        }
+      },
+      "117": {
+        "inputs": {
+          "text": "IMG_1"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_IMG_1"
+        }
+      },
+      "118": {
+        "inputs": {
+          "text": "QVL_CLIP",
+          "CLIP": [
+            "38",
+            0
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_QVL_CLIP"
+        }
+      },
+      "119": {
+        "inputs": {
+          "text": "QI_VAE",
+          "VAE": [
+            "39",
+            0
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_QI_VAE"
+        }
+      },
+      "120": {
+        "inputs": {
+          "text": "QVL_CLIP"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_QVL_CLIP"
+        }
+      },
+      "121": {
+        "inputs": {
+          "text": "IMG_1"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_IMG_1"
+        }
+      },
+      "122": {
+        "inputs": {
+          "text": "QI_VAE"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_QI_VAE"
+        }
+      },
+      "123": {
+        "inputs": {
+          "text": "IMG_1"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_IMG_1"
+        }
+      },
+      "124": {
+        "inputs": {
+          "text": "QI_VAE"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_QI_VAE"
+        }
+      },
+      "125": {
+        "inputs": {
+          "text": "QI_VAE"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_QI_VAE"
+        }
+      },
+      "126": {
+        "inputs": {
+          "text": "QI_VAE"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_QI_VAE"
+        }
+      },
+      "128": {
+        "inputs": {
+          "text": "QI_MOD",
+          "MODEL": [
+            "66",
+            0
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_QI_MOD"
+        }
+      },
+      "129": {
+        "inputs": {
+          "text": "QI_MOD"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_QI_MOD"
+        }
+      },
+      "130": {
+        "inputs": {
+          "text": "+VE_PROMPT",
+          "CONDITIONING": [
+            "111",
+            0
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_+VE_PROMPT"
+        }
+      },
+      "131": {
+        "inputs": {
+          "text": "-VE_PROMPT",
+          "CONDITIONING": [
+            "110",
+            0
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_-VE_PROMPT"
+        }
+      },
+      "132": {
+        "inputs": {
+          "text": "+VE_FINAL"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_+VE_FINAL"
+        }
+      },
+      "133": {
+        "inputs": {
+          "text": "-VE_PROMPT"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_-VE_PROMPT"
+        }
+      },
+      "142": {
+        "inputs": {
+          "text": "IMG_2"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_IMG_2"
+        }
+      },
+      "143": {
+        "inputs": {
+          "text": "IMG_3"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_IMG_3"
+        }
+      },
+      "145": {
+        "inputs": {
+          "text": "IMG_2"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_IMG_2"
+        }
+      },
+      "146": {
+        "inputs": {
+          "text": "IMG_3"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_IMG_3"
+        }
+      },
+      "147": {
+        "inputs": {},
+        "class_type": "Label (rgthree)",
+        "_meta": {
+          "title": "R.O.D.E.N.T Method"
+        }
+      },
+      "148": {
+        "inputs": {},
+        "class_type": "Label (rgthree)",
+        "_meta": {
+          "title": "Really Ordinary Divisions Easily Networked Together"
+        }
+      },
+      "149": {
+        "inputs": {},
+        "class_type": "Label (rgthree)",
+        "_meta": {
+          "title": "(simply group things in boxes to reorder easily - rinse & repeat)"
+        }
+      },
+      "150": {
+        "inputs": {
+          "text": "+VE_FINAL"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_+VE_FINAL"
+        }
+      },
+      "151": {
+        "inputs": {
+          "text": "-VE_PROMPT"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_-VE_PROMPT"
+        }
+      },
+      "152": {
+        "inputs": {
+          "text": "IMG_L"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_IMG_L"
+        }
+      },
+      "153": {
+        "inputs": {
+          "samples": [
+            "157",
+            0
+          ],
+          "vae": [
+            "154",
+            0
+          ]
+        },
+        "class_type": "VAEDecode",
+        "_meta": {
+          "title": "VAEDecode"
+        }
+      },
+      "154": {
+        "inputs": {
+          "text": "QI_VAE"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_QI_VAE"
+        }
+      },
+      "156": {
+        "inputs": {
+          "text": "QI_MOD"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_QI_MOD"
+        }
+      },
+      "157": {
+        "inputs": {
+          "seed": 192857897028952,
+          "steps": 4,
+          "cfg": 1,
+          "sampler_name": "euler_ancestral_cfg_pp",
+          "scheduler": "simple",
+          "denoise": 0.42,
+          "model": [
+            "156",
+            0
+          ],
+          "positive": [
+            "150",
+            0
+          ],
+          "negative": [
+            "151",
+            0
+          ],
+          "latent_image": [
+            "158",
+            0
+          ]
+        },
+        "class_type": "KSampler",
+        "_meta": {
+          "title": "KSampler"
+        }
+      },
+      "158": {
+        "inputs": {
+          "text": "nearest-exact",
+          "samples": [
+            "152",
+            0
+          ]
+        },
+        "class_type": "LatentUpscaleBy",
+        "_meta": {
+          "title": "LatentUpscaleBy"
+        }
+      },
+      "159": {
+        "inputs": {
+          "text": "IMG_L",
+          "LATENT": [
+            "3",
+            0
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_IMG_L"
+        }
+      },
+      "160": {
+        "inputs": {
+          "filename_prefix": "QWEN2509_HR",
+          "images": [
+            "153",
+            0
+          ]
+        },
+        "class_type": "SaveImage",
+        "_meta": {
+          "title": "SaveImage"
+        }
+      },
+      "162": {
+        "inputs": {
+          "value": [
+            {
+              "name": "A",
+              "selected": true,
+              "url": "/api/view?filename=rgthree.compare._temp_sjtln_00017_.png&type=temp&subfolder=&rand=0.08739584478631379"
+            },
+            {
+              "name": "B",
+              "selected": true,
+              "url": "/api/view?filename=rgthree.compare._temp_sjtln_00018_.png&type=temp&subfolder=&rand=0.18022507280213018"
+            }
+          ],
+          "image_a": [
+            "164",
+            0
+          ],
+          "image_b": [
+            "163",
+            0
+          ]
+        },
+        "class_type": "Image Comparer (rgthree)",
+        "_meta": {
+          "title": "Image Comparer (rgthree)"
+        }
+      },
+      "163": {
+        "inputs": {
+          "text": "IMG_OUT"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_IMG_OUT"
+        }
+      },
+      "164": {
+        "inputs": {
+          "text": "IMG_OUT_2"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_IMG_OUT_2"
+        }
+      },
+      "166": {
+        "inputs": {
+          "text": "IMG_OUT",
+          "IMAGE": [
+            "8",
+            0
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_IMG_OUT"
+        }
+      },
+      "174": {
+        "inputs": {
+          "text": "none",
+          "image": [
+            "115",
+            0
+          ],
+          "resolution": [
+            "179",
+            0
+          ]
+        },
+        "class_type": "AIO_Preprocessor",
+        "_meta": {
+          "title": "AIO_Preprocessor"
+        }
+      },
+      "179": {
+        "inputs": {
+          "value": 512,
+          "original_image": [
+            "115",
+            0
+          ],
+          "image_gen_width": [
+            "115",
+            1
+          ],
+          "image_gen_height": [
+            "115",
+            2
+          ]
+        },
+        "class_type": "PixelPerfectResolution",
+        "_meta": {
+          "title": "PixelPerfectResolution"
+        }
+      },
+      "180": {
+        "inputs": {
+          "image": "example.png"
+        },
+        "class_type": "LoadImage",
+        "_meta": {
+          "title": "LoadImage"
+        }
+      },
+      "181": {
+        "inputs": {
+          "value": 768,
+          "image": [
+            "180",
+            0
+          ]
+        },
+        "class_type": "ImageResizeKJv2",
+        "_meta": {
+          "title": "ImageResizeKJv2"
+        }
+      },
+      "182": {
+        "inputs": {
+          "text": "none",
+          "image": [
+            "181",
+            0
+          ],
+          "resolution": [
+            "184",
+            0
+          ]
+        },
+        "class_type": "AIO_Preprocessor",
+        "_meta": {
+          "title": "AIO_Preprocessor"
+        }
+      },
+      "183": {
+        "inputs": {
+          "text": "IMG_2",
+          "IMAGE": [
+            "182",
+            0
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_IMG_2"
+        }
+      },
+      "184": {
+        "inputs": {
+          "value": 512,
+          "original_image": [
+            "181",
+            0
+          ],
+          "image_gen_width": [
+            "181",
+            1
+          ],
+          "image_gen_height": [
+            "181",
+            2
+          ]
+        },
+        "class_type": "PixelPerfectResolution",
+        "_meta": {
+          "title": "PixelPerfectResolution"
+        }
+      },
+      "186": {
+        "inputs": {
+          "image": "example.png"
+        },
+        "class_type": "LoadImage",
+        "_meta": {
+          "title": "LoadImage"
+        }
+      },
+      "187": {
+        "inputs": {
+          "value": 1024,
+          "image": [
+            "186",
+            0
+          ]
+        },
+        "class_type": "ImageResizeKJv2",
+        "_meta": {
+          "title": "ImageResizeKJv2"
+        }
+      },
+      "188": {
+        "inputs": {
+          "text": "none",
+          "image": [
+            "187",
+            0
+          ],
+          "resolution": [
+            "190",
+            0
+          ]
+        },
+        "class_type": "AIO_Preprocessor",
+        "_meta": {
+          "title": "AIO_Preprocessor"
+        }
+      },
+      "189": {
+        "inputs": {
+          "text": "IMG_3",
+          "IMAGE": [
+            "188",
+            0
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_IMG_3"
+        }
+      },
+      "190": {
+        "inputs": {
+          "value": 512,
+          "original_image": [
+            "187",
+            0
+          ],
+          "image_gen_width": [
+            "187",
+            1
+          ],
+          "image_gen_height": [
+            "187",
+            2
+          ]
+        },
+        "class_type": "PixelPerfectResolution",
+        "_meta": {
+          "title": "PixelPerfectResolution"
+        }
+      },
+      "194": {
+        "inputs": {
+          "images": [
+            "182",
+            0
+          ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+          "title": "PreviewImage"
+        }
+      },
+      "206": {
+        "inputs": {
+          "width": 1280,
+          "height": 720,
+          "batch_size": 1
+        },
+        "class_type": "EmptySD3LatentImage",
+        "_meta": {
+          "title": "EmptySD3LatentImage"
+        }
+      },
+      "209": {
+        "inputs": {
+          "text": "change him to tomboy"
+        },
+        "class_type": "PrimitiveStringMultiline",
+        "_meta": {
+          "title": "PrimitiveStringMultiline"
+        }
+      },
+      "211": {
+        "inputs": {
+          "text": "BASE_PROMPT",
+          "STRING": [
+            "209",
+            0
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_BASE_PROMPT"
+        }
+      },
+      "213": {
+        "inputs": {
+          "text": "IMG_LAT",
+          "LATENT": [
+            "88",
+            0
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_IMG_LAT"
+        }
+      },
+      "214": {
+        "inputs": {
+          "text": "MT_LAT",
+          "LATENT": [
+            "206",
+            0
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_MT_LAT"
+        }
+      },
+      "216": {
+        "inputs": {
+          "any_01": [
+            "220",
+            0
+          ],
+          "any_02": [
+            "219",
+            0
+          ],
+          "any_03": [
+            "247",
+            0
+          ],
+          "any_04": [
+            "263",
+            0
+          ]
+        },
+        "class_type": "Any Switch (rgthree)",
+        "_meta": {
+          "title": "Any Switch (rgthree)"
+        }
+      },
+      "217": {
+        "inputs": {
+          "text": "LATENT",
+          "LATENT": [
+            "216",
+            0
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_LATENT"
+        }
+      },
+      "218": {
+        "inputs": {
+          "text": "LATENT"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_LATENT"
+        }
+      },
+      "219": {
+        "inputs": {
+          "text": "IMG_LAT"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_IMG_LAT"
+        }
+      },
+      "220": {
+        "inputs": {
+          "text": "MT_LAT"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_MT_LAT"
+        }
+      },
+      "221": {
+        "inputs": {
+          "text": "AI_PROMPT"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_AI_PROMPT"
+        }
+      },
+      "222": {
+        "inputs": {
+          "text": "BASE_PROMPT"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_BASE_PROMPT"
+        }
+      },
+      "223": {
+        "inputs": {
+          "any_01": [
+            "221",
+            0
+          ],
+          "any_02": [
+            "222",
+            0
+          ]
+        },
+        "class_type": "Any Switch (rgthree)",
+        "_meta": {
+          "title": "Any Switch (rgthree)"
+        }
+      },
+      "225": {
+        "inputs": {
+          "text": "PROMPT",
+          "STRING": [
+            "223",
+            0
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_PROMPT"
+        }
+      },
+      "226": {
+        "inputs": {
+          "text": "PROMPT"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_PROMPT"
+        }
+      },
+      "227": {
+        "inputs": {},
+        "class_type": "Fast Groups Muter (rgthree)",
+        "_meta": {
+          "title": "Fast Groups Muter (rgthree)"
+        }
+      },
+      "240": {
+        "inputs": {
+          "samples": [
+            "242",
+            0
+          ],
+          "mask": [
+            "246",
+            0
+          ]
+        },
+        "class_type": "SetLatentNoiseMask",
+        "_meta": {
+          "title": "SetLatentNoiseMask"
+        }
+      },
+      "241": {
+        "inputs": {
+          "text": "QI_VAE"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_QI_VAE"
+        }
+      },
+      "242": {
+        "inputs": {
+          "pixels": [
+            "244",
+            0
+          ],
+          "vae": [
+            "241",
+            0
+          ]
+        },
+        "class_type": "VAEEncode",
+        "_meta": {
+          "title": "VAEEncode"
+        }
+      },
+      "243": {
+        "inputs": {
+          "text": "IMG_LAT_MASK",
+          "LATENT": [
+            "240",
+            0
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_IMG_LAT_MASK"
+        }
+      },
+      "244": {
+        "inputs": {
+          "text": "IMG_1"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_IMG_1"
+        }
+      },
+      "246": {
+        "inputs": {
+          "text": "IMG_MASK"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_IMG_MASK"
+        }
+      },
+      "247": {
+        "inputs": {
+          "text": "IMG_LAT_MASK"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_IMG_LAT_MASK"
+        }
+      },
+      "254": {
+        "inputs": {
+          "samples": [
+            "256",
+            0
+          ],
+          "mask": [
+            "264",
+            1
+          ]
+        },
+        "class_type": "SetLatentNoiseMask",
+        "_meta": {
+          "title": "SetLatentNoiseMask"
+        }
+      },
+      "255": {
+        "inputs": {
+          "text": "QI_VAE"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_QI_VAE"
+        }
+      },
+      "256": {
+        "inputs": {
+          "pixels": [
+            "257",
+            0
+          ],
+          "vae": [
+            "255",
+            0
+          ]
+        },
+        "class_type": "VAEEncode",
+        "_meta": {
+          "title": "VAEEncode"
+        }
+      },
+      "257": {
+        "inputs": {
+          "text": "IMG_1"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_IMG_1"
+        }
+      },
+      "262": {
+        "inputs": {
+          "text": "IMG_LAT_AUTO_MASK",
+          "LATENT": [
+            "254",
+            0
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_IMG_LAT_AUTO_MASK"
+        }
+      },
+      "263": {
+        "inputs": {
+          "text": "IMG_LAT_AUTO_MASK"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_IMG_LAT_AUTO_MASK"
+        }
+      },
+      "264": {
+        "inputs": {
+          "value": -64,
+          "mask": [
+            "377",
+            1
+          ]
+        },
+        "class_type": "GrowMaskWithBlur",
+        "_meta": {
+          "title": "GrowMaskWithBlur"
+        }
+      },
+      "269": {
+        "inputs": {
+          "conditioning": [
+            "276",
+            0
+          ],
+          "latent": [
+            "273",
+            0
+          ]
+        },
+        "class_type": "ReferenceLatent",
+        "_meta": {
+          "title": "ReferenceLatent"
+        }
+      },
+      "270": {
+        "inputs": {
+          "conditioning": [
+            "269",
+            0
+          ],
+          "latent": [
+            "278",
+            0
+          ]
+        },
+        "class_type": "ReferenceLatent",
+        "_meta": {
+          "title": "ReferenceLatent"
+        }
+      },
+      "272": {
+        "inputs": {
+          "text": "IMG_1"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_IMG_1"
+        }
+      },
+      "273": {
+        "inputs": {
+          "pixels": [
+            "272",
+            0
+          ],
+          "vae": [
+            "274",
+            0
+          ]
+        },
+        "class_type": "VAEEncode",
+        "_meta": {
+          "title": "VAEEncode"
+        }
+      },
+      "274": {
+        "inputs": {
+          "text": "QI_VAE"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_QI_VAE"
+        }
+      },
+      "276": {
+        "inputs": {
+          "text": "+VE_PROMPT"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_+VE_PROMPT"
+        }
+      },
+      "277": {
+        "inputs": {
+          "text": "IMG_2"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_IMG_2"
+        }
+      },
+      "278": {
+        "inputs": {
+          "pixels": [
+            "277",
+            0
+          ],
+          "vae": [
+            "274",
+            0
+          ]
+        },
+        "class_type": "VAEEncode",
+        "_meta": {
+          "title": "VAEEncode"
+        }
+      },
+      "281": {
+        "inputs": {
+          "text": "+VE_MULTI_2",
+          "CONDITIONING": [
+            "270",
+            0
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_+VE_MULTI_2"
+        }
+      },
+      "282": {
+        "inputs": {
+          "text": "+VE_MULTI_2"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_+VE_MULTI_2"
+        }
+      },
+      "283": {
+        "inputs": {
+          "any_01": [
+            "338",
+            0
+          ],
+          "any_02": [
+            "282",
+            0
+          ],
+          "any_03": [
+            "326",
+            0
+          ],
+          "any_04": [
+            "285",
+            0
+          ]
+        },
+        "class_type": "Any Switch (rgthree)",
+        "_meta": {
+          "title": "Any Switch (rgthree)"
+        }
+      },
+      "285": {
+        "inputs": {
+          "text": "+VE_PROMPT"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_+VE_PROMPT"
+        }
+      },
+      "286": {
+        "inputs": {
+          "text": "+VE_FINAL",
+          "*": [
+            "283",
+            0
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_+VE_FINAL"
+        }
+      },
+      "314": {
+        "inputs": {
+          "text": "IMG_1"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_IMG_1"
+        }
+      },
+      "315": {
+        "inputs": {
+          "text": "QI_VAE"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_QI_VAE"
+        }
+      },
+      "316": {
+        "inputs": {
+          "text": "IMG_2"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_IMG_2"
+        }
+      },
+      "317": {
+        "inputs": {
+          "text": "IMG_3"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_IMG_3"
+        }
+      },
+      "318": {
+        "inputs": {
+          "pixels": [
+            "314",
+            0
+          ],
+          "vae": [
+            "315",
+            0
+          ]
+        },
+        "class_type": "VAEEncode",
+        "_meta": {
+          "title": "VAEEncode"
+        }
+      },
+      "319": {
+        "inputs": {
+          "text": "+VE_PROMPT"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_+VE_PROMPT"
+        }
+      },
+      "320": {
+        "inputs": {
+          "conditioning": [
+            "321",
+            0
+          ],
+          "latent": [
+            "323",
+            0
+          ]
+        },
+        "class_type": "ReferenceLatent",
+        "_meta": {
+          "title": "ReferenceLatent"
+        }
+      },
+      "321": {
+        "inputs": {
+          "conditioning": [
+            "319",
+            0
+          ],
+          "latent": [
+            "318",
+            0
+          ]
+        },
+        "class_type": "ReferenceLatent",
+        "_meta": {
+          "title": "ReferenceLatent"
+        }
+      },
+      "322": {
+        "inputs": {
+          "conditioning": [
+            "320",
+            0
+          ],
+          "latent": [
+            "324",
+            0
+          ]
+        },
+        "class_type": "ReferenceLatent",
+        "_meta": {
+          "title": "ReferenceLatent"
+        }
+      },
+      "323": {
+        "inputs": {
+          "pixels": [
+            "316",
+            0
+          ],
+          "vae": [
+            "315",
+            0
+          ]
+        },
+        "class_type": "VAEEncode",
+        "_meta": {
+          "title": "VAEEncode"
+        }
+      },
+      "324": {
+        "inputs": {
+          "pixels": [
+            "317",
+            0
+          ],
+          "vae": [
+            "315",
+            0
+          ]
+        },
+        "class_type": "VAEEncode",
+        "_meta": {
+          "title": "VAEEncode"
+        }
+      },
+      "325": {
+        "inputs": {
+          "text": "+VE_MULTI_3",
+          "CONDITIONING": [
+            "322",
+            0
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_+VE_MULTI_3"
+        }
+      },
+      "326": {
+        "inputs": {
+          "text": "+VE_MULTI_3"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_+VE_MULTI_3"
+        }
+      },
+      "327": {
+        "inputs": {
+          "text": "inductor",
+          "model": [
+            "75",
+            0
+          ]
+        },
+        "class_type": "TorchCompileModel",
+        "_meta": {
+          "title": "TorchCompileModel"
+        }
+      },
+      "329": {
+        "inputs": {
+          "text": "IMG_1"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_IMG_1"
+        }
+      },
+      "330": {
+        "inputs": {
+          "text": "QI_VAE"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_QI_VAE"
+        }
+      },
+      "332": {
+        "inputs": {
+          "pixels": [
+            "329",
+            0
+          ],
+          "vae": [
+            "330",
+            0
+          ]
+        },
+        "class_type": "VAEEncode",
+        "_meta": {
+          "title": "VAEEncode"
+        }
+      },
+      "333": {
+        "inputs": {
+          "text": "+VE_PROMPT"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_+VE_PROMPT"
+        }
+      },
+      "335": {
+        "inputs": {
+          "conditioning": [
+            "333",
+            0
+          ],
+          "latent": [
+            "332",
+            0
+          ]
+        },
+        "class_type": "ReferenceLatent",
+        "_meta": {
+          "title": "ReferenceLatent"
+        }
+      },
+      "337": {
+        "inputs": {
+          "text": "+VE_MULTI_1",
+          "CONDITIONING": [
+            "335",
+            0
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_+VE_MULTI_1"
+        }
+      },
+      "338": {
+        "inputs": {
+          "text": "+VE_MULTI_1"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_+VE_MULTI_1"
+        }
+      },
+      "362": {
+        "inputs": {},
+        "class_type": "Fast Groups Muter (rgthree)",
+        "_meta": {
+          "title": "Fast Groups Muter (rgthree) - Select a Latent"
+        }
+      },
+      "365": {
+        "inputs": {
+          "value": {},
+          "model": [
+            "401",
+            0
+          ]
+        },
+        "class_type": "Power Lora Loader (rgthree)",
+        "_meta": {
+          "title": "Power Lora Loader (rgthree)"
+        }
+      },
+      "373": {
+        "inputs": {},
+        "class_type": "Fast Groups Bypasser (rgthree)",
+        "_meta": {
+          "title": "Fast Groups Bypasser (rgthree)"
+        }
+      },
+      "377": {
+        "inputs": {
+          "filename": "RMBG-2.0",
+          "image": [
+            "257",
+            0
+          ]
+        },
+        "class_type": "RMBG",
+        "_meta": {
+          "title": "RMBG"
+        }
+      },
+      "388": {
+        "inputs": {
+          "filename": "Wan2.1_VAE_upscale2x_imageonly_real_v1.safetensors"
+        },
+        "class_type": "VAEUtils_CustomVAELoader",
+        "_meta": {
+          "title": "VAEUtils_CustomVAELoader"
+        }
+      },
+      "389": {
+        "inputs": {
+          "text": "UPS_VAE",
+          "VAE": [
+            "388",
+            0
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_UPS_VAE"
+        }
+      },
+      "393": {
+        "inputs": {
+          "value": -1,
+          "samples": [
+            "397",
+            0
+          ],
+          "vae": [
+            "394",
+            0
+          ]
+        },
+        "class_type": "VAEUtils_VAEDecodeTiled",
+        "_meta": {
+          "title": "VAEUtils_VAEDecodeTiled"
+        }
+      },
+      "394": {
+        "inputs": {
+          "text": "UPS_VAE"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_UPS_VAE"
+        }
+      },
+      "395": {
+        "inputs": {
+          "text": "IMG_OUT_2",
+          "IMAGE": [
+            "393",
+            0
+          ]
+        },
+        "class_type": "SetNode",
+        "_meta": {
+          "title": "Set_IMG_OUT_2"
+        }
+      },
+      "397": {
+        "inputs": {
+          "text": "IMG_L"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_IMG_L"
+        }
+      },
+      "398": {
+        "inputs": {
+          "filename_prefix": "ComfyUI",
+          "images": [
+            "395",
+            0
+          ]
+        },
+        "class_type": "SaveImage",
+        "_meta": {
+          "title": "SaveImage"
+        }
+      },
+      "399": {
+        "inputs": {
+          "text": "IMG_L"
+        },
+        "class_type": "GetNode",
+        "_meta": {
+          "title": "Get_IMG_L"
+        }
+      },
+      "400": {
+        "inputs": {},
+        "class_type": "Fast Groups Muter (rgthree)",
+        "_meta": {
+          "title": "Fast Groups Muter (rgthree)"
+        }
+      },
+      "401": {
+        "inputs": {
+          "filename": "Qwen-Image-Edit-2509-Q4_K_M.gguf"
+        },
+        "class_type": "UnetLoaderGGUF",
+        "_meta": {
+          "title": "UnetLoaderGGUF"
+        }
+      },
+      "403": {
+        "inputs": {
+          "images": [
+            "174",
+            0
+          ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+          "title": "PreviewImage"
+        }
+      },
+      "404": {
+        "inputs": {
+          "text": "lanczos",
+          "image": [
+            "78",
+            0
+          ]
+        },
+        "class_type": "ImageScaleToTotalPixels",
+        "_meta": {
+          "title": "ImageScaleToTotalPixels"
+        }
+      }
+    }
+  }
+}
